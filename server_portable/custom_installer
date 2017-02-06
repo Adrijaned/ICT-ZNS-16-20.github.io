@@ -1,0 +1,6 @@
+#!/bin/bash
+#Custom server installer for ICT-ZNS-16-20
+sudo cp custom_serverLauncher /usr/local/bin
+sudo cp -ar sponge ~/sponge
+sudo cp -ar ngrok ~/ngrok
+sudo touch /var/www/html/minecraft_adress

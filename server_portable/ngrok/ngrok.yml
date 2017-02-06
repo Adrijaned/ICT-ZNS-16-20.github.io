@@ -1,0 +1,11 @@
+console_ui: true
+region: eu
+json_resolver_url: ""
+dns_resolver_ips: []
+tunnels:
+  http_tunnel:
+    proto: http
+    addr: 80
+  minecraft:
+    proto: tcp
+    addr: 25565

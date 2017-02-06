@@ -1,0 +1,4 @@
+permissions:
+- '*'
+options:
+    language: eng

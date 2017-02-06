@@ -1,0 +1,14 @@
+#!/bin/bash
+# A launcher script for server ICT-ZNS-16-20
+cd ~/sponge
+gnome-terminal -e  "java -jar ./serverLauncher.jar"
+cd ~/ngrok
+gnome-terminal -e  "./ngrok start -config ../.ngrok2/ngrok.yml -config ./ngrok.yml --all"
+echo Launched.
+echo ""
+echo -n "Paste https link here > "
+read https
+echo -n "Paste tpc link here > "
+read minecraft
+echo "$https" | mail -s "Server launch on $DATE" adrijaned@gmail.com kubas791@seznam.cz
+echo minecraft > /var/www/html/minecraft_adress
