@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/hacker_theme.css">
+    <link rel="stylesheet" type="text/css" href="css/hacker_theme.css"/>
+    <meta charset="UTF-8"/>
     <title>ICT-ZNS-16/20</title></head>
 <body>
 <p>Currently under development.</p>
-<script>
-    var url = "https://9687.ngrok.io";
-    document.write("<p>Primary class page: <br>");
-    var http = new XMLHttpRequest();
-    http.open("HEAD", url, false);
-    http.send();
-    document.write("debug");
-    document.write(http.status.toString());
-    if (http.status != 200){
-        document.write("<b>Currently inaccessible</b></p>");
-    } else {
-        document.write("<a href=" + url + ">" +  url + "</a></p>");
-    }
-</script>
+<p>Primary class page:<br>
+    <script>
+        // Edit IP address directly here:
+        var url = "https://some.random.ip";
+
+        //Open http request
+        var http = new XMLHttpRequest();
+        http.open("GET", url, false);
+
+        /* Here I choose whether the server under the IP exists or not - it throws error or not.
+         And I don't give a fuck that it shouldn't be done by try/catch.*/
+        try {
+            http.send();
+            document.write("<a href=" + url + ">" + url + "</a></p>");
+            console.log("HAYO! It WORKS! It found the IP!")
+        } catch (e) {
+            document.write("<b>Currently inaccessible</b></p>");
+            console.log("Don't blame me for such bad usage of try/catch. Hey, it works, so y u care?")
+        }
+    </script>
 </body>
 </html>
