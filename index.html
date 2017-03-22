@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/hacker_theme.css" \>
-  <title>ICT-ZNS-16/20</title></head>
-<body><p>Currently under development.</p></body>
+    <link rel="stylesheet" type="text/css" href="css/hacker_theme.css">
+    <title>ICT-ZNS-16/20</title></head>
+<body>
+<p>Currently under development.</p>
+<script>
+    var url = "https://9687.ngrok.io";
+    document.write("<p>Primary class page: <br>");
+    var http = new XMLHttpRequest();
+    http.open("HEAD", url, false);
+    http.send();
+    if (http.status != 200){
+        document.write("<b>Currently inaccessible</b></p>")
+    } else {
+        document.write("<a href=" + url + ">" +  url + "</a></p>");
+    }
+</script>
+</body>
 </html>
