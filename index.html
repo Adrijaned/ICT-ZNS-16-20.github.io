@@ -11,6 +11,7 @@
     var http = new XMLHttpRequest();
     http.open("HEAD", url, false);
     http.send();
+    document.write("debug");
     document.write(http.status.toString());
     if (http.status != 200){
         document.write("<b>Currently inaccessible</b></p>");
