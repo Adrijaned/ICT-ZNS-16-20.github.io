@@ -11,8 +11,9 @@
     var http = new XMLHttpRequest();
     http.open("HEAD", url, false);
     http.send();
+    document.write(http.status.toString());
     if (http.status != 200){
-        document.write("<b>Currently inaccessible</b></p>")
+        document.write("<b>Currently inaccessible</b></p>");
     } else {
         document.write("<a href=" + url + ">" +  url + "</a></p>");
     }
